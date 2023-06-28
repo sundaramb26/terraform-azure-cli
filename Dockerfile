@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-get install --no-install-recommends -y curl=7.74.0-1.3+deb11u7
 RUN apt-get install --no-install-recommends -y ca-certificates=20210119
 # RUN apt-get install --no-install-recommends -y unzip=6.0-26
-RUN apt-get install --no-install-recommends -y unzip=6.0-23+deb10u3
+RUN apt-get install --no-install-recommends -y unzip
 RUN apt-get install --no-install-recommends -y gnupg2
 WORKDIR /workspace
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS
