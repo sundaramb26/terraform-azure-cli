@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-get install --no-install-recommends -y curl=7.74.0-1.3+deb11u7
 RUN apt-get install --no-install-recommends -y ca-certificates=20210119
 # RUN apt-get install --no-install-recommends -y unzip=6.0-26
-RUN apt-get install --no-install-recommends -y unzip
+RUN apt-get install --no-install-recommends -y unzip=6.0-23+deb10u3
 RUN apt-get install --no-install-recommends -y gnupg2
 WORKDIR /workspace
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS
@@ -46,9 +46,9 @@ RUN apt-get update \
     git=1:2.30.2-1 \
     python3=${PYTHON_MAJOR_VERSION}.2-3 \
     python3-distutils=${PYTHON_MAJOR_VERSION}.2-1 \
-    curl=7.74.0-1.3+deb11u1 \
+    curl=7.74.0-1.3+deb11u7 \
     jq=1.6-2.1 \
-    unzip=6.0-26 \
+    unzip=6.0-23+deb10u3 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && update-alternatives --install /usr/bin/python python /usr/bin/python${PYTHON_MAJOR_VERSION} 1
