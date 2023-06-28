@@ -44,7 +44,7 @@ ARG PYTHON_MAJOR_VERSION
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     ca-certificates=20210119 \
-    git=2.41.0 \
+    git \
     python3=${PYTHON_MAJOR_VERSION}.2-3 \
     python3-distutils=${PYTHON_MAJOR_VERSION}.2-1 \
     curl=7.74.0-1.3+deb11u7 \
