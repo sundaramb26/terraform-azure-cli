@@ -40,10 +40,11 @@ FROM debian:${DEBIAN_VERSION}
 LABEL maintainer="sundaramb26@github"
 ARG PYTHON_MAJOR_VERSION
 # Check packages version with https://www.debian.org/distrib/packages
+# updated Git version from  git=1:2.30.2-1 to 2.41.0 on 280623
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     ca-certificates=20210119 \
-    git=1:2.30.2-1 \
+    git=2.41.0 \
     python3=${PYTHON_MAJOR_VERSION}.2-3 \
     python3-distutils=${PYTHON_MAJOR_VERSION}.2-1 \
     curl=7.74.0-1.3+deb11u7 \
